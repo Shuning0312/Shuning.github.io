@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Hello | Joanna</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="简单的开始Python中列表的学习关于嘉宾名单的练习123inviters&#x3D;[&#39;tom&#39;,&#39;lucy&#39;,&#39;nancy&#39;] #邀请名单print(&#39;I will invite &#39;+inviters[0].title()+&#39;、&#39;+inviters[1].title()+&#39; and &#39;+inviters[2].title()+&#39; to come to my party.&#39;) #邀请列表里的好友参加我的派">
+  <meta name="description" content="简单的开始Python中列表的学习（一）关于嘉宾名单的练习123inviters&#x3D;[&#39;tom&#39;,&#39;lucy&#39;,&#39;nancy&#39;] #邀请名单print(&#39;I will invite &#39;+inviters[0].title()+&#39;、&#39;+inviters[1].title()+&#39; and &#39;+inviters[2].title()+&#39; to come to my party.&#39;) #邀请列表里的好友参加">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hello">
 <meta property="og:url" content="http://yoursite.com/2020/07/12/layout/index.html">
 <meta property="og:site_name" content="Joanna">
-<meta property="og:description" content="简单的开始Python中列表的学习关于嘉宾名单的练习123inviters&#x3D;[&#39;tom&#39;,&#39;lucy&#39;,&#39;nancy&#39;] #邀请名单print(&#39;I will invite &#39;+inviters[0].title()+&#39;、&#39;+inviters[1].title()+&#39; and &#39;+inviters[2].title()+&#39; to come to my party.&#39;) #邀请列表里的好友参加我的派">
+<meta property="og:description" content="简单的开始Python中列表的学习（一）关于嘉宾名单的练习123inviters&#x3D;[&#39;tom&#39;,&#39;lucy&#39;,&#39;nancy&#39;] #邀请名单print(&#39;I will invite &#39;+inviters[0].title()+&#39;、&#39;+inviters[1].title()+&#39; and &#39;+inviters[2].title()+&#39; to come to my party.&#39;) #邀请列表里的好友参加">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-07-12T03:12:23.000Z">
-<meta property="article:modified_time" content="2020-07-13T06:22:45.930Z">
+<meta property="article:modified_time" content="2020-07-13T06:23:54.713Z">
 <meta property="article:author" content="Joanna">
 <meta property="article:tag" content="joanna">
 <meta name="twitter:card" content="summary">
@@ -177,7 +177,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="简单的开始"><a href="#简单的开始" class="headerlink" title="简单的开始"></a>简单的开始</h1><h2 id="Python中列表的学习"><a href="#Python中列表的学习" class="headerlink" title="Python中列表的学习"></a>Python中列表的学习</h2><h4 id="关于嘉宾名单的练习"><a href="#关于嘉宾名单的练习" class="headerlink" title="关于嘉宾名单的练习"></a>关于嘉宾名单的练习</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">inviters=['tom','lucy','nancy'] #邀请名单</span><br><span class="line">print('I will invite '+inviters[0].title()+'、'+inviters[1].title()+' and '+inviters[2].title()+' to come to my party.') #邀请列表里的好友参加我的派对</span><br><span class="line">print(inviters[0].title()+' can not keep the appointment.') #不能赴约</span><br></pre></td></tr></table></figure>
+        <h1 id="简单的开始"><a href="#简单的开始" class="headerlink" title="简单的开始"></a>简单的开始</h1><h2 id="Python中列表的学习（一）"><a href="#Python中列表的学习（一）" class="headerlink" title="Python中列表的学习（一）"></a>Python中列表的学习（一）</h2><h4 id="关于嘉宾名单的练习"><a href="#关于嘉宾名单的练习" class="headerlink" title="关于嘉宾名单的练习"></a>关于嘉宾名单的练习</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">inviters=['tom','lucy','nancy'] #邀请名单</span><br><span class="line">print('I will invite '+inviters[0].title()+'、'+inviters[1].title()+' and '+inviters[2].title()+' to come to my party.') #邀请列表里的好友参加我的派对</span><br><span class="line">print(inviters[0].title()+' can not keep the appointment.') #不能赴约</span><br></pre></td></tr></table></figure>
 
 <h3 id="修改嘉宾名单"><a href="#修改嘉宾名单" class="headerlink" title="修改嘉宾名单"></a>修改嘉宾名单</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">inviters.remove('tom') #该嘉宾不能出席</span><br><span class="line">inviters.insert(0,'tony') #替换新的嘉宾</span><br><span class="line">print(<span class="string">'Hello, '</span>+inviters[<span class="number">0</span>].title()+<span class="string">'!'</span>+<span class="string">' I invite you to come to my party.'</span>)</span><br><span class="line">print(<span class="string">'Hello, '</span>+inviters[<span class="number">1</span>].title()+<span class="string">'!'</span>+<span class="string">' I invite you to come to my party.'</span>)</span><br><span class="line">print('Hello, '+inviters[2].title()+'!'+' I invite you to come to my party.') #向每位嘉宾发出邀请</span><br></pre></td></tr></table></figure>
 
