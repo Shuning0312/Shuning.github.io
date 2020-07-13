@@ -175,31 +175,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="简单的开始"><a href="#简单的开始" class="headerlink" title="简单的开始"></a>简单的开始</h1><h2 id="Python中列表的学习"><a href="#Python中列表的学习" class="headerlink" title="Python中列表的学习"></a>Python中列表的学习</h2><p>###嘉宾名单<br><code>inviters=[&#39;tom&#39;,&#39;lucy&#39;,&#39;nancy&#39;]#邀请名单
-print(&#39;I will invite &#39;+inviters[0].title()+&#39;、&#39;+inviters[1].title()+&#39; and &#39;+inviters[2].title()+&#39; to come to my party.&#39;)#邀请列表里的好友参加我的派对
-print(inviters[0].title()+&#39; can not keep the appointment.&#39;)#不能赴约</code></p>
-<p>###修改嘉宾名单<br><code>inviters.remove(&#39;tom&#39;)#该嘉宾不能出席
-inviters.insert(0,&#39;tony&#39;)#替换新的嘉宾
-print(&#39;Hello, &#39;+inviters[0].title()+&#39;!&#39;+&#39; I invite you to come to my party.&#39;)
-print(&#39;Hello, &#39;+inviters[1].title()+&#39;!&#39;+&#39; I invite you to come to my party.&#39;)
-print(&#39;Hello, &#39;+inviters[2].title()+&#39;!&#39;+&#39; I invite you to come to my party.&#39;)#向每位嘉宾发出邀请</code></p>
-<p>###添加嘉宾<br><code>print(&#39;I found a bigger table for our party.&#39;)#发现大餐桌
-inviters.insert(0,&#39;johnny&#39;)#添加新嘉宾
-inviters.insert(2,&#39;lucky&#39;)
-inviters.append(&#39;liu&#39;)#添加新嘉宾</code></p>
-<p>###缩减名单<br><code>print(&#39;I can only invite two guests to dinner&#39;)#只能邀请两位嘉宾
-inviter_1=inviters.pop(0)#删去不能邀请的四位
-print(&quot;I am sorry, i can not invite &quot;+inviter_1.title()+&quot; to dinner&quot;)#并告知
-inviter_2=inviters.pop(0)
-print(&quot;I am sorry, i can not invite &quot;+inviter_2.title()+&quot; to dinner&quot;)
-inviter_3=inviters.pop(0)
-print(&quot;I am sorry, i can not invite &quot;+inviter_3.title()+&quot; to dinner&quot;)
-inviter_4=inviters.pop(0)
-print(&quot;I am sorry, i can not invite &quot;+inviter_4.title()+&quot; to dinner&quot;)
-print(&#39;Hello, &#39;+inviters[0].title()+&#39;!&#39;+&#39; I invite you to come to my party.&#39;)#邀请剩余的两位
-print(&#39;Hello, &#39;+inviters[1].title()+&#39;!&#39;+&#39; I invite you to come to my party.&#39;)</code></p>
-<p>###验证<br><code>del inviters[0]#删去已邀请的两位嘉宾，验证空列表
-print(inviters)</code></p>
+        <h1 id="简单的开始"><a href="#简单的开始" class="headerlink" title="简单的开始"></a>简单的开始</h1><h2 id="Python中列表的学习"><a href="#Python中列表的学习" class="headerlink" title="Python中列表的学习"></a>Python中列表的学习</h2><h3 id="嘉宾名单"><a href="#嘉宾名单" class="headerlink" title="嘉宾名单"></a>嘉宾名单</h3><figure class="highlight"><figcaption><span>inviters</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print('I will invite '+inviters[0].title()+'、'+inviters[1].title()+' and '+inviters[2].title()+' to come to my party.')#邀请列表里的好友参加我的派对</span><br><span class="line">print(inviters[0].title()+' can not keep the appointment.')#不能赴约</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改嘉宾名单"><a href="#修改嘉宾名单" class="headerlink" title="修改嘉宾名单"></a>修改嘉宾名单</h3><figure class="highlight"><figcaption><span>inviters.remove('tom')#该嘉宾不能出席</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">inviters.insert(0,'tony')#替换新的嘉宾</span><br><span class="line">print(<span class="string">'Hello, '</span>+inviters[<span class="number">0</span>].title()+<span class="string">'!'</span>+<span class="string">' I invite you to come to my party.'</span>)</span><br><span class="line">print(<span class="string">'Hello, '</span>+inviters[<span class="number">1</span>].title()+<span class="string">'!'</span>+<span class="string">' I invite you to come to my party.'</span>)</span><br><span class="line">print('Hello, '+inviters[2].title()+'!'+' I invite you to come to my party.')#向每位嘉宾发出邀请</span><br></pre></td></tr></table></figure>
+
+<h3 id="添加嘉宾"><a href="#添加嘉宾" class="headerlink" title="添加嘉宾"></a>添加嘉宾</h3><figure class="highlight"><figcaption><span>print('I found a bigger table for our party.')#发现大餐桌</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">inviters.insert(0,'johnny')#添加新嘉宾</span><br><span class="line">inviters.insert(<span class="number">2</span>,<span class="string">'lucky'</span>)</span><br><span class="line">inviters.append('liu')#添加新嘉宾</span><br></pre></td></tr></table></figure>
+
+<h3 id="缩减名单"><a href="#缩减名单" class="headerlink" title="缩减名单"></a>缩减名单</h3><figure class="highlight java"><figcaption><span>print('I can only invite two guests to dinner')#只能邀请两位嘉宾</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">inviter_1=inviters.pop(0)#删去不能邀请的四位</span><br><span class="line">print("I am sorry, i can not invite "+inviter_1.title()+" to dinner")#并告知</span><br><span class="line">inviter_2=inviters.pop(<span class="number">0</span>)</span><br><span class="line">print(<span class="string">"I am sorry, i can not invite "</span>+inviter_2.title()+<span class="string">" to dinner"</span>)</span><br><span class="line">inviter_3=inviters.pop(<span class="number">0</span>)</span><br><span class="line">print(<span class="string">"I am sorry, i can not invite "</span>+inviter_3.title()+<span class="string">" to dinner"</span>)</span><br><span class="line">inviter_4=inviters.pop(<span class="number">0</span>)</span><br><span class="line">print(<span class="string">"I am sorry, i can not invite "</span>+inviter_4.title()+<span class="string">" to dinner"</span>)</span><br><span class="line">print('Hello, '+inviters[0].title()+'!'+' I invite you to come to my party.')#邀请剩余的两位</span><br><span class="line">print(<span class="string">'Hello, '</span>+inviters[<span class="number">1</span>].title()+<span class="string">'!'</span>+<span class="string">' I invite you to come to my party.'</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h3><p>```java del inviters[0]#删去已邀请的两位嘉宾，验证空列表<br>print(inviters)`<br>``</p>
 
       
 
