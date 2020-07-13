@@ -16,7 +16,7 @@
 <meta property="og:description" content="列表简介（二）组织列表我们经常需要以特定的顺序呈现信息。有时希望保留列表元素最初的排列顺序，而有时又需要调整排列顺序。 使用方法 sort()对列表进行永久性排列假设我们有一个汽车列表，并要让其中的汽车按字母顺序排列 123cars &#x3D; [&#39;bmw&#39;,&#39;Audi&#39;,&#39;toyota&#39;,&#39;subaru&#39;,&#39;audi&#39;]cars.sort()print(cars) 此时方法sort（）永久性地改变了列表">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-07-13T06:26:29.000Z">
-<meta property="article:modified_time" content="2020-07-13T08:13:15.950Z">
+<meta property="article:modified_time" content="2020-07-13T08:21:47.122Z">
 <meta property="article:author" content="Joanna">
 <meta property="article:tag" content="joanna">
 <meta name="twitter:card" content="summary">
@@ -183,7 +183,7 @@
 <p>此时方法<code>sort（）</code>永久性地改变了列表元素的顺序。现在，汽车列表的排列顺序为：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'Audi'</span>, <span class="string">'audi'</span>, <span class="string">'bmw'</span>, <span class="string">'subaru'</span>, <span class="string">'toyota'</span>]</span><br></pre></td></tr></table></figure>
 
-<p>*如果需要按与字母顺序相反的顺序排列列表，只需向<code>sort（)</code>方法传递参数<code>reverse=true</code>,如下：</p>
+<p>*如果需要按与字母顺序相反的顺序排列列表，只需向<code>sort（）</code>方法传递参数<code>reverse=true</code>,如下：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cars = [<span class="string">'bmw'</span>,<span class="string">'Audi'</span>,<span class="string">'toyota'</span>,<span class="string">'subaru'</span>,<span class="string">'audi'</span>]</span><br><span class="line">cars.sort(reverse=<span class="literal">True</span>) <span class="comment">#注意'True'中的'T'必须大写</span></span><br><span class="line">print(cars)</span><br></pre></td></tr></table></figure>
 <p>即可得到：<br><code>[&#39;toyota&#39;, &#39;subaru&#39;, &#39;bmw&#39;, &#39;audi&#39;, &#39;Audi&#39;]</code></p>
 <h3 id="使用函数-sorted-对列表进行临时排序"><a href="#使用函数-sorted-对列表进行临时排序" class="headerlink" title="使用函数 sorted()对列表进行临时排序"></a>使用函数 sorted()对列表进行临时排序</h3><p>在保留列表元素原来排列顺序的情况下，同时以特定的顺序呈现他们，可使用函数<code>sorted（）</code><br>下面尝试对汽车列表调用这个函数 </p>
@@ -200,13 +200,12 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'subaru'</span>, <span class="string">'toyota'</span>, <span class="string">'audi'</span>, <span class="string">'bwm'</span>]</span><br></pre></td></tr></table></figure>
 <p>方法<code>reverse（）</code>是永久性修改列表元素排列顺序，但可以随时恢复到原来的位置，只需对列表再次调用reverse（）即可</p>
 <h3 id="使用函数-len（）确定列表的长度"><a href="#使用函数-len（）确定列表的长度" class="headerlink" title="使用函数 len（）确定列表的长度"></a>使用函数 len（）确定列表的长度</h3><p>Python计算列表元素数从1开始，所以不会出现差一错误</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>cars=[‘bwm’,’audi’,’toyota’,’subaru’]<br>print(len(cars))<br>4</p>
-</blockquote>
-</blockquote>
-</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cars=[<span class="string">'bwm'</span>,<span class="string">'audi'</span>,<span class="string">'toyota'</span>,<span class="string">'subaru'</span>]</span><br><span class="line">print(len(cars))</span><br></pre></td></tr></table></figure>
+<p>结果显然为</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">4</span></span><br></pre></td></tr></table></figure>
+
+
+
 
       
 
