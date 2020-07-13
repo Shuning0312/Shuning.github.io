@@ -175,11 +175,31 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="简单的开始"><a href="#简单的开始" class="headerlink" title="简单的开始"></a>简单的开始</h1><h2 id="Python中列表的学习"><a href="#Python中列表的学习" class="headerlink" title="Python中列表的学习"></a>Python中列表的学习</h2><p>嘉宾名单<br>inviters=[‘tom’,’lucy’,’nancy’]#邀请名单<br>print(‘I will invite ‘+inviters[0].title()+’、’+inviters[1].title()+’ and ‘+inviters[2].title()+’ to come to my party.’)#邀请列表里的好友参加我的派对<br>print(inviters[0].title()+’ can not keep the appointment.’)#不能赴约</p>
-<p>修改嘉宾名单<br>inviters.remove(‘tom’)#该嘉宾不能出席<br>inviters.insert(0,’tony’)#替换新的嘉宾<br>print(‘Hello, ‘+inviters[0].title()+’!’+’ I invite you to come to my party.’)<br>print(‘Hello, ‘+inviters[1].title()+’!’+’ I invite you to come to my party.’)<br>print(‘Hello, ‘+inviters[2].title()+’!’+’ I invite you to come to my party.’)#向每位嘉宾发出邀请</p>
-<p>添加嘉宾<br>print(‘I found a bigger table for our party.’)#发现大餐桌<br>inviters.insert(0,’johnny’)#添加新嘉宾<br>inviters.insert(2,’lucky’)<br>inviters.append(‘liu’)#添加新嘉宾</p>
-<p>缩减名单<br>print(‘I can only invite two guests to dinner’)#只能邀请两位嘉宾<br>inviter_1=inviters.pop(0)#删去不能邀请的四位<br>print(“I am sorry, i can not invite “+inviter_1.title()+” to dinner”)#并告知<br>inviter_2=inviters.pop(0)<br>print(“I am sorry, i can not invite “+inviter_2.title()+” to dinner”)<br>inviter_3=inviters.pop(0)<br>print(“I am sorry, i can not invite “+inviter_3.title()+” to dinner”)<br>inviter_4=inviters.pop(0)<br>print(“I am sorry, i can not invite “+inviter_4.title()+” to dinner”)<br>print(‘Hello, ‘+inviters[0].title()+’!’+’ I invite you to come to my party.’)#邀请剩余的两位<br>print(‘Hello, ‘+inviters[1].title()+’!’+’ I invite you to come to my party.’)</p>
-<p>验证<br>del inviters[0]#删去已邀请的两位嘉宾，验证空列表<br>print(inviters)</p>
+        <h1 id="简单的开始"><a href="#简单的开始" class="headerlink" title="简单的开始"></a>简单的开始</h1><h2 id="Python中列表的学习"><a href="#Python中列表的学习" class="headerlink" title="Python中列表的学习"></a>Python中列表的学习</h2><p>###嘉宾名单<br><code>inviters=[&#39;tom&#39;,&#39;lucy&#39;,&#39;nancy&#39;]#邀请名单
+print(&#39;I will invite &#39;+inviters[0].title()+&#39;、&#39;+inviters[1].title()+&#39; and &#39;+inviters[2].title()+&#39; to come to my party.&#39;)#邀请列表里的好友参加我的派对
+print(inviters[0].title()+&#39; can not keep the appointment.&#39;)#不能赴约</code></p>
+<p>###修改嘉宾名单<br><code>inviters.remove(&#39;tom&#39;)#该嘉宾不能出席
+inviters.insert(0,&#39;tony&#39;)#替换新的嘉宾
+print(&#39;Hello, &#39;+inviters[0].title()+&#39;!&#39;+&#39; I invite you to come to my party.&#39;)
+print(&#39;Hello, &#39;+inviters[1].title()+&#39;!&#39;+&#39; I invite you to come to my party.&#39;)
+print(&#39;Hello, &#39;+inviters[2].title()+&#39;!&#39;+&#39; I invite you to come to my party.&#39;)#向每位嘉宾发出邀请</code></p>
+<p>###添加嘉宾<br><code>print(&#39;I found a bigger table for our party.&#39;)#发现大餐桌
+inviters.insert(0,&#39;johnny&#39;)#添加新嘉宾
+inviters.insert(2,&#39;lucky&#39;)
+inviters.append(&#39;liu&#39;)#添加新嘉宾</code></p>
+<p>###缩减名单<br><code>print(&#39;I can only invite two guests to dinner&#39;)#只能邀请两位嘉宾
+inviter_1=inviters.pop(0)#删去不能邀请的四位
+print(&quot;I am sorry, i can not invite &quot;+inviter_1.title()+&quot; to dinner&quot;)#并告知
+inviter_2=inviters.pop(0)
+print(&quot;I am sorry, i can not invite &quot;+inviter_2.title()+&quot; to dinner&quot;)
+inviter_3=inviters.pop(0)
+print(&quot;I am sorry, i can not invite &quot;+inviter_3.title()+&quot; to dinner&quot;)
+inviter_4=inviters.pop(0)
+print(&quot;I am sorry, i can not invite &quot;+inviter_4.title()+&quot; to dinner&quot;)
+print(&#39;Hello, &#39;+inviters[0].title()+&#39;!&#39;+&#39; I invite you to come to my party.&#39;)#邀请剩余的两位
+print(&#39;Hello, &#39;+inviters[1].title()+&#39;!&#39;+&#39; I invite you to come to my party.&#39;)</code></p>
+<p>###验证<br><code>del inviters[0]#删去已邀请的两位嘉宾，验证空列表
+print(inviters)</code></p>
 
       
 
