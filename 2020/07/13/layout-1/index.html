@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hello | Joanna</title>
+  <title>python中列表的学习（二） | Joanna</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="简单的开始Python中列表的学习（一）关于嘉宾名单的练习123inviters&#x3D;[&#39;tom&#39;,&#39;lucy&#39;,&#39;nancy&#39;] #邀请名单print(&#39;I will invite &#39;+inviters[0].title()+&#39;、&#39;+inviters[1].title()+&#39; and &#39;+inviters[2].title()+&#39; to come to my party.&#39;) #邀请列表里的好友参加">
+  <meta name="description" content="组织列表我们经常需要以特定的顺序呈现信息。有时希望保留列表元素最初的排列顺序，而有时又需要调整排列顺序。 使用方法sort()对列表进行永久性排列假设我们有一个汽车列表，并要让其中的汽车按字母顺序排列 123cars &#x3D; [&#39;bmw&#39;,&#39;Audi&#39;,&#39;toyota&#39;,&#39;subaru&#39;,&#39;audi&#39;]cars.sort()print(cars) 此时方法sort（）永久性地改变了列表元素的顺序。现在">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello">
-<meta property="og:url" content="http://yoursite.com/2020/07/12/layout/index.html">
+<meta property="og:title" content="python中列表的学习（二）">
+<meta property="og:url" content="http://yoursite.com/2020/07/13/layout-1/index.html">
 <meta property="og:site_name" content="Joanna">
-<meta property="og:description" content="简单的开始Python中列表的学习（一）关于嘉宾名单的练习123inviters&#x3D;[&#39;tom&#39;,&#39;lucy&#39;,&#39;nancy&#39;] #邀请名单print(&#39;I will invite &#39;+inviters[0].title()+&#39;、&#39;+inviters[1].title()+&#39; and &#39;+inviters[2].title()+&#39; to come to my party.&#39;) #邀请列表里的好友参加">
+<meta property="og:description" content="组织列表我们经常需要以特定的顺序呈现信息。有时希望保留列表元素最初的排列顺序，而有时又需要调整排列顺序。 使用方法sort()对列表进行永久性排列假设我们有一个汽车列表，并要让其中的汽车按字母顺序排列 123cars &#x3D; [&#39;bmw&#39;,&#39;Audi&#39;,&#39;toyota&#39;,&#39;subaru&#39;,&#39;audi&#39;]cars.sort()print(cars) 此时方法sort（）永久性地改变了列表元素的顺序。现在">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-07-12T03:12:23.000Z">
-<meta property="article:modified_time" content="2020-07-13T06:53:17.321Z">
+<meta property="article:published_time" content="2020-07-13T06:26:29.000Z">
+<meta property="article:modified_time" content="2020-07-13T06:53:54.647Z">
 <meta property="article:author" content="Joanna">
 <meta property="article:tag" content="joanna">
 <meta name="twitter:card" content="summary">
@@ -157,35 +157,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-layout" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-layout-1" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello
+      python中列表的学习（二）
     </h1>
   
 
         
-        <a href="/2020/07/12/layout/" class="archive-article-date">
-  	<time datetime="2020-07-12T03:12:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-12</time>
+        <a href="/2020/07/13/layout-1/" class="archive-article-date">
+  	<time datetime="2020-07-13T06:26:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="简单的开始"><a href="#简单的开始" class="headerlink" title="简单的开始"></a>简单的开始</h1><h2 id="Python中列表的学习（一）"><a href="#Python中列表的学习（一）" class="headerlink" title="Python中列表的学习（一）"></a>Python中列表的学习（一）</h2><h4 id="关于嘉宾名单的练习"><a href="#关于嘉宾名单的练习" class="headerlink" title="关于嘉宾名单的练习"></a>关于嘉宾名单的练习</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">inviters=[<span class="string">'tom'</span>,<span class="string">'lucy'</span>,<span class="string">'nancy'</span>] <span class="comment">#邀请名单</span></span><br><span class="line">print(<span class="string">'I will invite '</span>+inviters[<span class="number">0</span>].title()+<span class="string">'、'</span>+inviters[<span class="number">1</span>].title()+<span class="string">' and '</span>+inviters[<span class="number">2</span>].title()+<span class="string">' to come to my party.'</span>) <span class="comment">#邀请列表里的好友参加我的派对</span></span><br><span class="line">print(inviters[<span class="number">0</span>].title()+<span class="string">' can not keep the appointment.'</span>) <span class="comment">#不能赴约</span></span><br></pre></td></tr></table></figure>
+        <h1 id="组织列表"><a href="#组织列表" class="headerlink" title="组织列表"></a>组织列表</h1><p>我们经常需要以特定的顺序呈现信息。有时希望保留列表元素最初的排列顺序，而有时又需要调整排列顺序。</p>
+<h2 id="使用方法sort-对列表进行永久性排列"><a href="#使用方法sort-对列表进行永久性排列" class="headerlink" title="使用方法sort()对列表进行永久性排列"></a>使用方法sort()对列表进行永久性排列</h2><p>假设我们有一个汽车列表，并要让其中的汽车按字母顺序排列</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cars = [<span class="string">'bmw'</span>,<span class="string">'Audi'</span>,<span class="string">'toyota'</span>,<span class="string">'subaru'</span>,<span class="string">'audi'</span>]</span><br><span class="line">cars.sort()</span><br><span class="line">print(cars)</span><br></pre></td></tr></table></figure>
+<p>此时方法<code>sort（）</code>永久性地改变了列表元素的顺序。现在，汽车列表的排列顺序为：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'Audi'</span>, <span class="string">'audi'</span>, <span class="string">'bmw'</span>, <span class="string">'subaru'</span>, <span class="string">'toyota'</span>]</span><br></pre></td></tr></table></figure>
 
-<h3 id="修改嘉宾名单"><a href="#修改嘉宾名单" class="headerlink" title="修改嘉宾名单"></a>修改嘉宾名单</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">inviters.remove(<span class="string">'tom'</span>) <span class="comment">#该嘉宾不能出席</span></span><br><span class="line">inviters.insert(<span class="number">0</span>,<span class="string">'tony'</span>) <span class="comment">#替换新的嘉宾</span></span><br><span class="line">print(<span class="string">'Hello, '</span>+inviters[<span class="number">0</span>].title()+<span class="string">'!'</span>+<span class="string">' I invite you to come to my party.'</span>)</span><br><span class="line">print(<span class="string">'Hello, '</span>+inviters[<span class="number">1</span>].title()+<span class="string">'!'</span>+<span class="string">' I invite you to come to my party.'</span>)</span><br><span class="line">print(<span class="string">'Hello, '</span>+inviters[<span class="number">2</span>].title()+<span class="string">'!'</span>+<span class="string">' I invite you to come to my party.'</span>) <span class="comment">#向每位嘉宾发出邀请</span></span><br></pre></td></tr></table></figure>
+<p>如果需要按与字母顺序相反的顺序排列列表，只需向<code>sort（)</code>方法传递参数<code>reverse=true</code>,如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cars = [<span class="string">'bmw'</span>,<span class="string">'Audi'</span>,<span class="string">'toyota'</span>,<span class="string">'subaru'</span>,<span class="string">'audi'</span>]</span><br><span class="line">cars.sort(reverse=<span class="literal">True</span>) <span class="comment">#注意'True'中的'T'必须大写</span></span><br><span class="line">print(cars)</span><br></pre></td></tr></table></figure>
+<p>即可得到：<br><code>[&#39;toyota&#39;, &#39;subaru&#39;, &#39;bmw&#39;, &#39;audi&#39;, &#39;Audi&#39;]</code></p>
 
-<h3 id="添加嘉宾"><a href="#添加嘉宾" class="headerlink" title="添加嘉宾"></a>添加嘉宾</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">'I found a bigger table for our party.'</span>) <span class="comment">#发现大餐桌</span></span><br><span class="line">inviters.insert(<span class="number">0</span>,<span class="string">'johnny'</span>) <span class="comment">#添加新嘉宾</span></span><br><span class="line">inviters.insert(<span class="number">2</span>,<span class="string">'lucky'</span>)</span><br><span class="line">inviters.append(<span class="string">'liu'</span>) <span class="comment">#添加新嘉宾</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="缩减名单"><a href="#缩减名单" class="headerlink" title="缩减名单"></a>缩减名单</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">'I can only invite two guests to dinner'</span>) <span class="comment">#只能邀请两位嘉宾</span></span><br><span class="line">inviter_1=inviters.pop(<span class="number">0</span>)<span class="comment">#删去不能邀请的四位</span></span><br><span class="line">print(<span class="string">"I am sorry, i can not invite "</span>+inviter_1.title()+<span class="string">" to dinner"</span>) <span class="comment">#并告知</span></span><br><span class="line">inviter_2=inviters.pop(<span class="number">0</span>)</span><br><span class="line">print(<span class="string">"I am sorry, i can not invite "</span>+inviter_2.title()+<span class="string">" to dinner"</span>)</span><br><span class="line">inviter_3=inviters.pop(<span class="number">0</span>)</span><br><span class="line">print(<span class="string">"I am sorry, i can not invite "</span>+inviter_3.title()+<span class="string">" to dinner"</span>)</span><br><span class="line">inviter_4=inviters.pop(<span class="number">0</span>)</span><br><span class="line">print(<span class="string">"I am sorry, i can not invite "</span>+inviter_4.title()+<span class="string">" to dinner"</span>)</span><br><span class="line">print(<span class="string">'Hello, '</span>+inviters[<span class="number">0</span>].title()+<span class="string">'!'</span>+<span class="string">' I invite you to come to my party.'</span>) <span class="comment">#邀请剩余的两位</span></span><br><span class="line">print(<span class="string">'Hello, '</span>+inviters[<span class="number">1</span>].title()+<span class="string">'!'</span>+<span class="string">' I invite you to come to my party.'</span>)</span><br></pre></td></tr></table></figure>
-
-<h3 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">del</span> inviters[<span class="number">0</span>] <span class="comment">#删去已邀请的两位嘉宾，验证空列表</span></span><br><span class="line">print(inviters)</span><br></pre></td></tr></table></figure>
       
 
       
@@ -264,7 +265,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/12/layout/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/13/layout-1/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -278,15 +279,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/07/13/layout-1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          python中列表的学习（二）
-        
-      </div>
-    </a>
   
+    <a href="/2020/07/12/layout/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
