@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>python中列表的学习（三） | Joanna</title>
+  <title>python中列表的学习（四） | Joanna</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="列表简介（三）组织列表的练习放眼世界1234567891011121314places&#x3D;[&#39;shanghai&#39;,&#39;yancheng&#39;,&#39;beijing&#39;,&#39;hangzhou&#39;,&#39;nanjing&#39;] #确定旅游名单print(places) #打印列表print(sorted(places)) #用sorted（）函数打印列表print(places) #核实排列顺序未变print(sorted(p">
+  <meta name="description" content="操作列表（一）遍历整个列表的练习披萨123loves&#x3D;[&#39;seafood&#39;,&#39;sausage&#39;,&#39;cheese&#39;,&#39;beef&#39;] #四种喜欢的披萨for love in loves: #用for循环打印列表    print(love) 运行后： 1234seafoodsausagecheesebeef 12for love in loves:    print(&#39;I like &#39;+love.ti">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python中列表的学习（三）">
-<meta property="og:url" content="http://yoursite.com/2020/07/13/layout-2/index.html">
+<meta property="og:title" content="python中列表的学习（四）">
+<meta property="og:url" content="http://yoursite.com/2020/07/14/python-3/index.html">
 <meta property="og:site_name" content="Joanna">
-<meta property="og:description" content="列表简介（三）组织列表的练习放眼世界1234567891011121314places&#x3D;[&#39;shanghai&#39;,&#39;yancheng&#39;,&#39;beijing&#39;,&#39;hangzhou&#39;,&#39;nanjing&#39;] #确定旅游名单print(places) #打印列表print(sorted(places)) #用sorted（）函数打印列表print(places) #核实排列顺序未变print(sorted(p">
+<meta property="og:description" content="操作列表（一）遍历整个列表的练习披萨123loves&#x3D;[&#39;seafood&#39;,&#39;sausage&#39;,&#39;cheese&#39;,&#39;beef&#39;] #四种喜欢的披萨for love in loves: #用for循环打印列表    print(love) 运行后： 1234seafoodsausagecheesebeef 12for love in loves:    print(&#39;I like &#39;+love.ti">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-07-13T08:31:46.000Z">
-<meta property="article:modified_time" content="2020-07-13T09:18:36.854Z">
+<meta property="article:published_time" content="2020-07-14T06:31:18.000Z">
+<meta property="article:modified_time" content="2020-07-14T06:53:47.521Z">
 <meta property="article:author" content="Joanna">
 <meta property="article:tag" content="joanna">
 <meta name="twitter:card" content="summary">
@@ -151,28 +151,35 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-layout-2" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-python-3" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      python中列表的学习（三）
+      python中列表的学习（四）
     </h1>
   
 
         
-        <a href="/2020/07/13/layout-2/" class="archive-article-date">
-  	<time datetime="2020-07-13T08:31:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-13</time>
+        <a href="/2020/07/14/python-3/" class="archive-article-date">
+  	<time datetime="2020-07-14T06:31:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-14</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="列表简介（三）"><a href="#列表简介（三）" class="headerlink" title="列表简介（三）"></a>列表简介（三）</h1><h2 id="组织列表的练习"><a href="#组织列表的练习" class="headerlink" title="组织列表的练习"></a>组织列表的练习</h2><h3 id="放眼世界"><a href="#放眼世界" class="headerlink" title="放眼世界"></a>放眼世界</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">places=[<span class="string">'shanghai'</span>,<span class="string">'yancheng'</span>,<span class="string">'beijing'</span>,<span class="string">'hangzhou'</span>,<span class="string">'nanjing'</span>] <span class="comment">#确定旅游名单</span></span><br><span class="line">print(places) <span class="comment">#打印列表</span></span><br><span class="line">print(sorted(places)) <span class="comment">#用sorted（）函数打印列表</span></span><br><span class="line">print(places) <span class="comment">#核实排列顺序未变</span></span><br><span class="line">print(sorted(places,reverse=<span class="literal">True</span>)) <span class="comment">#按字母顺序相反的顺序打印列表</span></span><br><span class="line">print(places) <span class="comment">#核实列表顺序没变</span></span><br><span class="line">places.reverse() <span class="comment">#倒置列表元素的排列顺序</span></span><br><span class="line">print(places) <span class="comment">#核实顺序被修改</span></span><br><span class="line">places.reverse() <span class="comment">#恢复列表元素的排列顺序</span></span><br><span class="line">print(places) <span class="comment">#核实顺序</span></span><br><span class="line">places.sort() <span class="comment">#修改顺序</span></span><br><span class="line">print(places) <span class="comment">#核实顺序</span></span><br><span class="line">places.sort(reverse=<span class="literal">True</span>) <span class="comment">#注意'True'中的'T'必须大写</span></span><br><span class="line">print(places) <span class="comment">#核实顺序被修改</span></span><br></pre></td></tr></table></figure>
-<h3 id="晚餐嘉宾"><a href="#晚餐嘉宾" class="headerlink" title="晚餐嘉宾"></a>晚餐嘉宾</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">inviters=[<span class="string">'tom'</span>,<span class="string">'lucy'</span>,<span class="string">'nancy'</span>] <span class="comment">#邀请名单</span></span><br><span class="line">print(<span class="string">'I invited '</span>+len(inviters)+<span class="string">' inviters.'</span>) <span class="comment">#练习函数len()</span></span><br></pre></td></tr></table></figure>
+        <h1 id="操作列表（一）"><a href="#操作列表（一）" class="headerlink" title="操作列表（一）"></a>操作列表（一）</h1><h2 id="遍历整个列表的练习"><a href="#遍历整个列表的练习" class="headerlink" title="遍历整个列表的练习"></a>遍历整个列表的练习</h2><h3 id="披萨"><a href="#披萨" class="headerlink" title="披萨"></a>披萨</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">loves=[<span class="string">'seafood'</span>,<span class="string">'sausage'</span>,<span class="string">'cheese'</span>,<span class="string">'beef'</span>] <span class="comment">#四种喜欢的披萨</span></span><br><span class="line"><span class="keyword">for</span> love <span class="keyword">in</span> loves: <span class="comment">#用for循环打印列表</span></span><br><span class="line">    print(love)</span><br></pre></td></tr></table></figure>
+<p>运行后：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">seafood</span><br><span class="line">sausage</span><br><span class="line">cheese</span><br><span class="line">beef</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> love <span class="keyword">in</span> loves:</span><br><span class="line">    print(<span class="string">'I like '</span>+love.title()+<span class="string">' pizza.'</span>) <span class="comment">#对每种披萨都显示一种输出</span></span><br></pre></td></tr></table></figure>
+<p>运行后：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">I like Seafood pizza.</span><br><span class="line">I like Sausage pizza.</span><br><span class="line">I like Cheese pizza.</span><br><span class="line">I like Beef pizza.</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> love <span class="keyword">in</span> loves:</span><br><span class="line">    print(<span class="string">'I like '</span>+love.title()+<span class="string">' pizza.'</span>) <span class="comment">#对每种披萨都显示一种输出</span></span><br><span class="line">print(<span class="string">'\n'</span>+<span class="string">'I really love pizza!'</span>) <span class="comment">#在循环外添加总结性语句</span></span><br></pre></td></tr></table></figure>
+<p>结果如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">I like Seafood pizza.</span><br><span class="line">I like Sausage pizza.</span><br><span class="line">I like Cheese pizza.</span><br><span class="line">I like Beef pizza.</span><br><span class="line"></span><br><span class="line">I really love pizza!</span><br></pre></td></tr></table></figure>
       
 
       
@@ -251,7 +258,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/13/layout-2/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/14/python-3/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -265,9 +272,18 @@
   
 <nav id="article-nav">
   
+    <a href="/2020/07/14/python-4/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          [python]
+        
+      </div>
+    </a>
   
-    <a href="/2020/07/13/layout-1/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">python中列表的学习（二）</div>
+  
+    <a href="/2020/07/13/python-2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">python中列表的学习（三）</div>
       <i class="icon-circle-right"></i>
     </a>
   
