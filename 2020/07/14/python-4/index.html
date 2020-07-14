@@ -8,13 +8,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>python中列表的学习（四） | Joanna</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="操作列表（二）创建数字列表的练习数到2012for number in range(1,21):    print(number) #使用for循环打印数字 一百万1234numbers &#x3D; []for number in range(1,1000001):    numbers.append(number)print(numbers) #打印一百万的元素列表 计算数的总和12numbers&#x3D;li">
+<meta property="og:type" content="article">
 <meta property="og:title" content="python中列表的学习（四）">
 <meta property="og:url" content="http://yoursite.com/2020/07/14/python-4/index.html">
 <meta property="og:site_name" content="Joanna">
+<meta property="og:description" content="操作列表（二）创建数字列表的练习数到2012for number in range(1,21):    print(number) #使用for循环打印数字 一百万1234numbers &#x3D; []for number in range(1,1000001):    numbers.append(number)print(numbers) #打印一百万的元素列表 计算数的总和12numbers&#x3D;li">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-07-14T06:54:25.000Z">
-<meta property="article:modified_time" content="2020-07-14T07:14:34.841Z">
+<meta property="article:modified_time" content="2020-07-14T07:57:25.271Z">
 <meta property="article:author" content="Joanna">
 <meta property="article:tag" content="joanna">
 <meta name="twitter:card" content="summary">
@@ -169,7 +171,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="操作列表（二）"><a href="#操作列表（二）" class="headerlink" title="操作列表（二）"></a>操作列表（二）</h1><h2 id="创建数字列表的练习"><a href="#创建数字列表的练习" class="headerlink" title="创建数字列表的练习"></a>创建数字列表的练习</h2><h3 id="数到20"><a href="#数到20" class="headerlink" title="数到20"></a>数到20</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> number <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">21</span>):</span><br><span class="line">    print(number) <span class="comment">#使用for循环打印数字</span></span><br></pre></td></tr></table></figure>
+<h3 id="一百万"><a href="#一百万" class="headerlink" title="一百万"></a>一百万</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">numbers = []</span><br><span class="line"><span class="keyword">for</span> number <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">1000001</span>):</span><br><span class="line">    numbers.append(number)</span><br><span class="line">print(numbers) <span class="comment">#打印一百万的元素列表</span></span><br></pre></td></tr></table></figure>
+<h3 id="计算数的总和"><a href="#计算数的总和" class="headerlink" title="计算数的总和"></a>计算数的总和</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">numbers=list(range(<span class="number">1</span>,<span class="number">1000001</span>))</span><br><span class="line">sum(numbers)</span><br></pre></td></tr></table></figure>
+<h3 id="奇数"><a href="#奇数" class="headerlink" title="奇数"></a>奇数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> odd <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">21</span>,<span class="number">2</span>):</span><br><span class="line">    print(odd) <span class="comment">#用for循环打印奇数</span></span><br></pre></td></tr></table></figure>
+<h3 id="3的倍数"><a href="#3的倍数" class="headerlink" title="3的倍数"></a>3的倍数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">numbers=(list(range(<span class="number">3</span>,<span class="number">31</span>,<span class="number">3</span>))) <span class="comment">#创建被3整除的列表</span></span><br><span class="line"><span class="keyword">for</span> number <span class="keyword">in</span> numbers:</span><br><span class="line">    print(number) <span class="comment">#使用for语句打印列表里数字</span></span><br></pre></td></tr></table></figure>
+<h3 id="立方"><a href="#立方" class="headerlink" title="立方"></a>立方</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cubes=[]</span><br><span class="line"><span class="keyword">for</span> number <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">11</span>):</span><br><span class="line">    cube=number**<span class="number">3</span></span><br><span class="line">    cubes.append(cube) </span><br><span class="line">print(cubes) <span class="comment">#打印立方数列表</span></span><br></pre></td></tr></table></figure>
+<h3 id="立方解析"><a href="#立方解析" class="headerlink" title="立方解析"></a>立方解析</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cubes=[number**<span class="number">3</span> <span class="keyword">for</span> number <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">11</span>)] <span class="comment">#列表解析里for语句没有冒号</span></span><br><span class="line">print(cubes)</span><br></pre></td></tr></table></figure>
       
 
       
