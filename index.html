@@ -149,6 +149,71 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-python-5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/16/python-5/">python中列表的学习（五）</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/16/python-5/" class="archive-article-date">
+  	<time datetime="2020-07-16T14:38:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="操作列表（三）"><a href="#操作列表（三）" class="headerlink" title="操作列表（三）"></a>操作列表（三）</h1><h2 id="使用列表的一部分"><a href="#使用列表的一部分" class="headerlink" title="使用列表的一部分"></a>使用列表的一部分</h2><h3 id="遍历切片"><a href="#遍历切片" class="headerlink" title="遍历切片"></a>遍历切片</h3><p>为了遍历列表的部分元素，我们在for循环里使用切片。例如以下，我们遍历前三名队员，并打印他们的名字：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">players = [<span class="string">'charles'</span>,<span class="string">'martina'</span>,<span class="string">'michael'</span>,<span class="string">'florence'</span>,<span class="string">'eli'</span>]</span><br><span class="line"></span><br><span class="line">print(<span class="string">'Here are the first three players on my team:'</span>)</span><br><span class="line"><span class="keyword">for</span> player <span class="keyword">in</span> players[:<span class="number">3</span>]:</span><br><span class="line">    print(player.title())</span><br></pre></td></tr></table></figure>
+<h3 id="复制列表"><a href="#复制列表" class="headerlink" title="复制列表"></a>复制列表</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">my_foods = [<span class="string">'pizza'</span>,<span class="string">'falafel'</span>,<span class="string">'carrot cake'</span>]</span><br><span class="line">friend_foods = my_foods[:] <span class="comment">#不指定任何索引的情况下从列表my_foods中提取一个切片，从而创建  这个列表的副本，再将该副本储存到变量friend_foods中</span></span><br><span class="line"></span><br><span class="line">friend_foods = my_foods <span class="comment">#该语法是让python将新变量friend_foods关联到包含在my_foods中的列表，因此这两个变量都指向同一个列表</span></span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/16/python-5/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-python-4" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
