@@ -149,6 +149,82 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-python-6" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/17/python-6/">python中列表的学习（五）</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/17/python-6/" class="archive-article-date">
+  	<time datetime="2020-07-17T13:33:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="操作列表（四）"><a href="#操作列表（四）" class="headerlink" title="操作列表（四）"></a>操作列表（四）</h1><h2 id="使用列表的一部分的练习"><a href="#使用列表的一部分的练习" class="headerlink" title="使用列表的一部分的练习"></a>使用列表的一部分的练习</h2><h3 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">players = [<span class="string">'charles'</span>,<span class="string">'martina'</span>,<span class="string">'michael'</span>,<span class="string">'florence'</span>,<span class="string">'eli'</span>]</span><br><span class="line"></span><br><span class="line">print(players[:<span class="number">3</span>]) <span class="comment">#使用切片打印列表前三个元素</span></span><br><span class="line">print(players[<span class="number">1</span>:<span class="number">4</span>]) <span class="comment">#使用切片打印列表中间三个元素</span></span><br><span class="line">print(players[<span class="number">-3</span>:]) <span class="comment">#使用切片打印列表后三个元素</span></span><br></pre></td></tr></table></figure>
+<h3 id="你的披萨和我的披萨"><a href="#你的披萨和我的披萨" class="headerlink" title="你的披萨和我的披萨"></a>你的披萨和我的披萨</h3><pre><code class="python">my_pizzas=[<span class="string">'seafood'</span>,<span class="string">'sausage'</span>,<span class="string">'cheese'</span>,<span class="string">'beef'</span>]
+friend_pizzas=my_pizzas[:] <span class="comment">#创建副本</span>
+
+my_pizzas.append(<span class="string">'corn'</span>) <span class="comment">#在原来列表中添加一种披萨</span>
+friend_pizzas.append(<span class="string">'chicken'</span>) <span class="comment">#在副本中添加一种披萨</span>
+
+print(<span class="string">'My favorite pizzas are:'</span>)
+<span class="keyword">for</span> pizza <span class="keyword">in</span> my_pizzas[:]:
+    print(pizza) <span class="comment">#输出</span>
+
+print(<span class="string">'\n'</span>+<span class="string">'My favorite pizzas are:'</span>)
+<span class="keyword">for</span> pizza_ <span class="keyword">in</span> friend_pizzas[:]:
+    print(pizza_) <span class="comment">#输出</span></code></pre>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/17/python-6/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-python-5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
