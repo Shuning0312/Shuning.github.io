@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>python中列表的学习（五） | Joanna</title>
+  <title>python中列表的学习（六） | Joanna</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="操作列表（三）使用列表的一部分遍历切片为了遍历列表的部分元素，我们在for循环里使用切片。例如以下，我们遍历前三名队员，并打印他们的名字： 12345players &#x3D; [&#39;charles&#39;,&#39;martina&#39;,&#39;michael&#39;,&#39;florence&#39;,&#39;eli&#39;]print(&#39;Here are the first three players on my team:&#39;)for player in">
+  <meta name="description" content="操作列表（五）元组定义元组定义元组后，通过索引来访问元素，与列表类似。例如，我们将矩形的长度和宽度储存在一个元组中： 123dimensions &#x3D; (200,50)print(dimensions[0])print(dimensions[1]) 如果我们试图像修改列表一样修改元组的元素 1dimensions[0]&#x3D;250 显然将会导致python返回类型错误消息，因为python不能修改元组的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python中列表的学习（五）">
-<meta property="og:url" content="http://yoursite.com/2020/07/16/python-5/index.html">
+<meta property="og:title" content="python中列表的学习（六）">
+<meta property="og:url" content="http://yoursite.com/2020/07/19/python-7/index.html">
 <meta property="og:site_name" content="Joanna">
-<meta property="og:description" content="操作列表（三）使用列表的一部分遍历切片为了遍历列表的部分元素，我们在for循环里使用切片。例如以下，我们遍历前三名队员，并打印他们的名字： 12345players &#x3D; [&#39;charles&#39;,&#39;martina&#39;,&#39;michael&#39;,&#39;florence&#39;,&#39;eli&#39;]print(&#39;Here are the first three players on my team:&#39;)for player in">
+<meta property="og:description" content="操作列表（五）元组定义元组定义元组后，通过索引来访问元素，与列表类似。例如，我们将矩形的长度和宽度储存在一个元组中： 123dimensions &#x3D; (200,50)print(dimensions[0])print(dimensions[1]) 如果我们试图像修改列表一样修改元组的元素 1dimensions[0]&#x3D;250 显然将会导致python返回类型错误消息，因为python不能修改元组的">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-07-16T14:38:00.000Z">
-<meta property="article:modified_time" content="2020-07-16T15:35:08.198Z">
+<meta property="article:published_time" content="2020-07-19T14:41:10.000Z">
+<meta property="article:modified_time" content="2020-07-19T15:08:21.455Z">
 <meta property="article:author" content="Joanna">
 <meta property="article:tag" content="joanna">
 <meta name="twitter:card" content="summary">
@@ -151,29 +151,35 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-python-5" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-python-7" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      python中列表的学习（五）
+      python中列表的学习（六）
     </h1>
   
 
         
-        <a href="/2020/07/16/python-5/" class="archive-article-date">
-  	<time datetime="2020-07-16T14:38:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-16</time>
+        <a href="/2020/07/19/python-7/" class="archive-article-date">
+  	<time datetime="2020-07-19T14:41:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-19</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="操作列表（三）"><a href="#操作列表（三）" class="headerlink" title="操作列表（三）"></a>操作列表（三）</h1><h2 id="使用列表的一部分"><a href="#使用列表的一部分" class="headerlink" title="使用列表的一部分"></a>使用列表的一部分</h2><h3 id="遍历切片"><a href="#遍历切片" class="headerlink" title="遍历切片"></a>遍历切片</h3><p>为了遍历列表的部分元素，我们在for循环里使用切片。例如以下，我们遍历前三名队员，并打印他们的名字：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">players = [<span class="string">'charles'</span>,<span class="string">'martina'</span>,<span class="string">'michael'</span>,<span class="string">'florence'</span>,<span class="string">'eli'</span>]</span><br><span class="line"></span><br><span class="line">print(<span class="string">'Here are the first three players on my team:'</span>)</span><br><span class="line"><span class="keyword">for</span> player <span class="keyword">in</span> players[:<span class="number">3</span>]:</span><br><span class="line">    print(player.title())</span><br></pre></td></tr></table></figure>
-<h3 id="复制列表"><a href="#复制列表" class="headerlink" title="复制列表"></a>复制列表</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">my_foods = [<span class="string">'pizza'</span>,<span class="string">'falafel'</span>,<span class="string">'carrot cake'</span>]</span><br><span class="line">friend_foods = my_foods[:] <span class="comment">#不指定任何索引的情况下从列表my_foods中提取一个切片，从而创建这个列表的副本，再将该副本储存到变量friend_foods中</span></span><br><span class="line"></span><br><span class="line">friend_foods = my_foods <span class="comment">#该语法是让python将新变量friend_foods关联到包含在my_foods中的列表，因此这两个变量都指向同一个列表</span></span><br></pre></td></tr></table></figure>
+        <h1 id="操作列表（五）"><a href="#操作列表（五）" class="headerlink" title="操作列表（五）"></a>操作列表（五）</h1><h2 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h2><h3 id="定义元组"><a href="#定义元组" class="headerlink" title="定义元组"></a>定义元组</h3><p>定义元组后，通过索引来访问元素，与列表类似。例如，我们将矩形的长度和宽度储存在一个元组中：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dimensions = (<span class="number">200</span>,<span class="number">50</span>)</span><br><span class="line">print(dimensions[<span class="number">0</span>])</span><br><span class="line">print(dimensions[<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
+<p>如果我们试图像修改列表一样修改元组的元素</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dimensions[<span class="number">0</span>]=<span class="number">250</span></span><br></pre></td></tr></table></figure>
+<p>显然将会导致python返回类型错误消息，因为python不能修改元组的元素。</p>
+<h3 id="遍历元组中的所有值"><a href="#遍历元组中的所有值" class="headerlink" title="遍历元组中的所有值"></a>遍历元组中的所有值</h3><p>类似于列表，我们同样可以使用for循环来遍历元组中的所有值：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dimensions = (<span class="number">200</span>,<span class="number">50</span>)</span><br><span class="line"><span class="keyword">for</span> dimension <span class="keyword">in</span> dimensions:</span><br><span class="line">    print(dimension)</span><br></pre></td></tr></table></figure>
+<h3 id="修改元组变量"><a href="#修改元组变量" class="headerlink" title="修改元组变量"></a>修改元组变量</h3><p>想要修改元组变量，我们可以给储存元素的变量赋值，例如以下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">dimensions = (<span class="number">200</span>,<span class="number">50</span>)</span><br><span class="line">print(<span class="string">'originla dimensions:'</span>)</span><br><span class="line"><span class="keyword">for</span> dimension <span class="keyword">in</span> dimensions:</span><br><span class="line">    print(dimension)</span><br><span class="line"></span><br><span class="line">dimensions = (<span class="number">400</span>,<span class="number">100</span>) <span class="comment">#重新定义整个元组，从而达到修改元组变量的目的</span></span><br><span class="line">print(<span class="string">'\nmodified dimensions:'</span>)</span><br><span class="line"><span class="keyword">for</span> dimension <span class="keyword">in</span> dimensions:</span><br><span class="line">    print(dimension)</span><br></pre></td></tr></table></figure>
 
       
 
@@ -253,7 +259,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/16/python-5/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/19/python-7/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -267,18 +273,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/07/17/python-6/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          python中列表的学习（五）
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/07/14/python-4/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">python中列表的学习（四）</div>
+    <a href="/2020/07/17/python-6/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">python中列表的学习（五）</div>
       <i class="icon-circle-right"></i>
     </a>
   

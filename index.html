@@ -149,6 +149,77 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-python-7" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/19/python-7/">python中列表的学习（六）</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/19/python-7/" class="archive-article-date">
+  	<time datetime="2020-07-19T14:41:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="操作列表（五）"><a href="#操作列表（五）" class="headerlink" title="操作列表（五）"></a>操作列表（五）</h1><h2 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h2><h3 id="定义元组"><a href="#定义元组" class="headerlink" title="定义元组"></a>定义元组</h3><p>定义元组后，通过索引来访问元素，与列表类似。例如，我们将矩形的长度和宽度储存在一个元组中：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dimensions = (<span class="number">200</span>,<span class="number">50</span>)</span><br><span class="line">print(dimensions[<span class="number">0</span>])</span><br><span class="line">print(dimensions[<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
+<p>如果我们试图像修改列表一样修改元组的元素</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dimensions[<span class="number">0</span>]=<span class="number">250</span></span><br></pre></td></tr></table></figure>
+<p>显然将会导致python返回类型错误消息，因为python不能修改元组的元素。</p>
+<h3 id="遍历元组中的所有值"><a href="#遍历元组中的所有值" class="headerlink" title="遍历元组中的所有值"></a>遍历元组中的所有值</h3><p>类似于列表，我们同样可以使用for循环来遍历元组中的所有值：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dimensions = (<span class="number">200</span>,<span class="number">50</span>)</span><br><span class="line"><span class="keyword">for</span> dimension <span class="keyword">in</span> dimensions:</span><br><span class="line">    print(dimension)</span><br></pre></td></tr></table></figure>
+<h3 id="修改元组变量"><a href="#修改元组变量" class="headerlink" title="修改元组变量"></a>修改元组变量</h3><p>想要修改元组变量，我们可以给储存元素的变量赋值，例如以下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">dimensions = (<span class="number">200</span>,<span class="number">50</span>)</span><br><span class="line">print(<span class="string">'originla dimensions:'</span>)</span><br><span class="line"><span class="keyword">for</span> dimension <span class="keyword">in</span> dimensions:</span><br><span class="line">    print(dimension)</span><br><span class="line"></span><br><span class="line">dimensions = (<span class="number">400</span>,<span class="number">100</span>) <span class="comment">#重新定义整个元组，从而达到修改元组变量的目的</span></span><br><span class="line">print(<span class="string">'\nmodified dimensions:'</span>)</span><br><span class="line"><span class="keyword">for</span> dimension <span class="keyword">in</span> dimensions:</span><br><span class="line">    print(dimension)</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/19/python-7/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-python-6" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -837,7 +908,7 @@ MathJax.Hub.Queue(function() {
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">技术小白&lt;br&gt;&lt;br&gt;学习记录&lt;br&gt;从blog开始，记录成长点滴&lt;br&gt;&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">技术小白&lt;br&gt;&lt;br&gt;学习笔记&lt;br&gt;跟着Eric Matthes一起学python&lt;br&gt;&lt;br&gt;谢谢大家</div>
   	  	
     	</section>
     
