@@ -149,6 +149,70 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-python-11" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/08/01/python-11/">python中用户输入与while循环（一）</a>
+    </h1>
+  
+
+        
+        <a href="/2020/08/01/python-11/" class="archive-article-date">
+  	<time datetime="2020-08-01T08:33:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在外晃荡了一个多星期，淦，joanna回来了，冲冲冲！</p>
+<h1 id="函数input（）的工作原理"><a href="#函数input（）的工作原理" class="headerlink" title="函数input（）的工作原理"></a>函数input（）的工作原理</h1><p>函数input（）让程序暂停运行，等待用户输入一些文本。<br>“好吧，joanna现在要出去寻找灵感了，晚上见！”</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/08/01/python-11/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-python-10" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -731,97 +795,6 @@ print(<span class="string">'\n'</span>+<span class="string">'My favorite pizzas 
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2020/07/13/python-2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-python-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/13/python-1/">python中列表的学习（二）</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/13/python-1/" class="archive-article-date">
-  	<time datetime="2020-07-13T06:26:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="列表简介（二）"><a href="#列表简介（二）" class="headerlink" title="列表简介（二）"></a>列表简介（二）</h1><h2 id="组织列表"><a href="#组织列表" class="headerlink" title="组织列表"></a>组织列表</h2><p>我们经常需要以特定的顺序呈现信息。有时希望保留列表元素最初的排列顺序，而有时又需要调整排列顺序。</p>
-<h3 id="使用方法-sort-对列表进行永久性排列"><a href="#使用方法-sort-对列表进行永久性排列" class="headerlink" title="使用方法 sort()对列表进行永久性排列"></a>使用方法 sort()对列表进行永久性排列</h3><p>假设我们有一个汽车列表，并要让其中的汽车按字母顺序排列</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cars = [<span class="string">'bmw'</span>,<span class="string">'Audi'</span>,<span class="string">'toyota'</span>,<span class="string">'subaru'</span>,<span class="string">'audi'</span>]</span><br><span class="line">cars.sort()</span><br><span class="line">print(cars)</span><br></pre></td></tr></table></figure>
-<p>此时方法<code>sort（）</code>永久性地改变了列表元素的顺序。现在，汽车列表的排列顺序为：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'Audi'</span>, <span class="string">'audi'</span>, <span class="string">'bmw'</span>, <span class="string">'subaru'</span>, <span class="string">'toyota'</span>]</span><br></pre></td></tr></table></figure>
-
-<p>*如果需要按与字母顺序相反的顺序排列列表，只需向<code>sort（）</code>方法传递参数<code>reverse=true</code>,如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cars = [<span class="string">'bmw'</span>,<span class="string">'Audi'</span>,<span class="string">'toyota'</span>,<span class="string">'subaru'</span>,<span class="string">'audi'</span>]</span><br><span class="line">cars.sort(reverse=<span class="literal">True</span>) <span class="comment">#注意'True'中的'T'必须大写</span></span><br><span class="line">print(cars)</span><br></pre></td></tr></table></figure>
-<p>即可得到：<br><code>[&#39;toyota&#39;, &#39;subaru&#39;, &#39;bmw&#39;, &#39;audi&#39;, &#39;Audi&#39;]</code></p>
-<h3 id="使用函数-sorted-对列表进行临时排序"><a href="#使用函数-sorted-对列表进行临时排序" class="headerlink" title="使用函数 sorted()对列表进行临时排序"></a>使用函数 sorted()对列表进行临时排序</h3><p>在保留列表元素原来排列顺序的情况下，同时以特定的顺序呈现他们，可使用函数<code>sorted（）</code><br>下面尝试对汽车列表调用这个函数 </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cars=[<span class="string">'bwm'</span>,<span class="string">'audi'</span>,<span class="string">'toyota'</span>,<span class="string">'subaru'</span>]</span><br><span class="line">print(<span class="string">'Here is the original list:'</span>)</span><br><span class="line">print(cars) <span class="comment">#原始列表顺序</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">'Here is the sorted list:'</span>)</span><br><span class="line">print(sorted(cars)) <span class="comment">#排列后列表顺序</span></span><br><span class="line"></span><br><span class="line">print(cars) <span class="comment">#验证临时性</span></span><br></pre></td></tr></table></figure>
-<p>输出结果依次是：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Here <span class="keyword">is</span> the original list:</span><br><span class="line">[<span class="string">'bwm'</span>, <span class="string">'audi'</span>, <span class="string">'toyota'</span>, <span class="string">'subaru'</span>]</span><br><span class="line"></span><br><span class="line">Here <span class="keyword">is</span> the sorted list:</span><br><span class="line">[<span class="string">'audi'</span>, <span class="string">'bwm'</span>, <span class="string">'subaru'</span>, <span class="string">'toyota'</span>]</span><br><span class="line"></span><br><span class="line">[<span class="string">'bwm'</span>, <span class="string">'audi'</span>, <span class="string">'toyota'</span>, <span class="string">'subaru'</span>] <span class="comment">#验证成功</span></span><br></pre></td></tr></table></figure>
-
-<p>*如果要按字母相反的顺序显示，同样可以向函数<code>sorted（）</code>传递参数<code>reverse=True</code></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cars=[<span class="string">'bwm'</span>,<span class="string">'audi'</span>,<span class="string">'toyota'</span>,<span class="string">'subaru'</span>]</span><br><span class="line">print(sorted(cars,reverse=<span class="literal">True</span>)) <span class="comment">#注意cars后面是逗号</span></span><br></pre></td></tr></table></figure>
-<p>即可得到：<br><code>[&#39;toyota&#39;, &#39;subaru&#39;, &#39;bwm&#39;, &#39;audi&#39;]</code></p>
-<h3 id="使用方法-reverse（）倒着打印列表"><a href="#使用方法-reverse（）倒着打印列表" class="headerlink" title="使用方法 reverse（）倒着打印列表"></a>使用方法 reverse（）倒着打印列表</h3><p>该方法可以用来反转元素的排列顺序。假设汽车列表是按购买时间排列的，我们可以轻松地按相反的顺序排列汽车：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cars=[<span class="string">'bwm'</span>,<span class="string">'audi'</span>,<span class="string">'toyota'</span>,<span class="string">'subaru'</span>]</span><br><span class="line">cars.reverse()</span><br><span class="line">print(cars)</span><br></pre></td></tr></table></figure>
-<p>反转列表元素地排列顺序为：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'subaru'</span>, <span class="string">'toyota'</span>, <span class="string">'audi'</span>, <span class="string">'bwm'</span>]</span><br></pre></td></tr></table></figure>
-<p>方法<code>reverse（）</code>是永久性修改列表元素排列顺序，但可以随时恢复到原来的位置，只需对列表再次调用reverse（）即可</p>
-<h3 id="使用函数-len（）确定列表的长度"><a href="#使用函数-len（）确定列表的长度" class="headerlink" title="使用函数 len（）确定列表的长度"></a>使用函数 len（）确定列表的长度</h3><p>Python计算列表元素数从1开始，所以不会出现差一错误</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cars=[<span class="string">'bwm'</span>,<span class="string">'audi'</span>,<span class="string">'toyota'</span>,<span class="string">'subaru'</span>]</span><br><span class="line">print(len(cars))</span><br></pre></td></tr></table></figure>
-<p>结果显然为</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">4</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/13/python-1/">展开全文 >></a>
         </p>
       
 
