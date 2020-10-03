@@ -149,6 +149,71 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-python-11" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/03/python-11/">C语言中弹球小游戏的实现</a>
+    </h1>
+  
+
+        
+        <a href="/2020/10/03/python-11/" class="archive-article-date">
+  	<time datetime="2020-10-03T12:18:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="程序源码"><a href="#程序源码" class="headerlink" title="程序源码"></a>程序源码</h1><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#include&lt;stdio.h&gt;</span></span><br><span class="line"><span class="meta">#include&lt;winbgim.h&gt;</span></span><br><span class="line"><span class="meta">#include&lt;windows.h&gt;</span></span><br><span class="line"><span class="meta">#include&lt;stdlib.h&gt;</span></span><br><span class="line"><span class="meta">#include&lt;time.h&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    initwindow(<span class="number">600</span>,<span class="number">600</span>); <span class="comment">//定义初始窗口大小</span></span><br><span class="line">    <span class="keyword">int</span> x; <span class="comment">//x未定义初始值，便于取随机值</span></span><br><span class="line">    <span class="keyword">int</span> t=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> s=<span class="number">500</span>;</span><br><span class="line">    <span class="keyword">int</span> y=<span class="number">100</span>; <span class="comment">//y取固定值</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> xStep = <span class="number">15</span>; <span class="comment">//小球的运动步长</span></span><br><span class="line">    <span class="keyword">int</span> yStep = <span class="number">5</span>;</span><br><span class="line">    <span class="keyword">int</span> xRect = <span class="number">0</span>; <span class="comment">//矩形的一个顶点的初始位置</span></span><br><span class="line">    <span class="keyword">int</span> yRect = <span class="number">550</span>;</span><br><span class="line">    <span class="keyword">int</span> xWidth = <span class="number">100</span>; <span class="comment">//矩形的长</span></span><br><span class="line">    <span class="keyword">int</span> yHeight = <span class="number">50</span>; <span class="comment">//矩形的宽</span></span><br><span class="line">    <span class="keyword">int</span> a,d;</span><br><span class="line"></span><br><span class="line">    srand(time(NULL)); <span class="comment">//x取随机值</span></span><br><span class="line">    x=rand()%(s-t)+t; <span class="comment">//随机值的范围</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        cleardevice(); <span class="comment">//清除屏幕和图形缓冲区</span></span><br><span class="line"></span><br><span class="line">        circle(x,y,<span class="number">15</span>);<span class="comment">//定义小球初始位置和半径大小</span></span><br><span class="line">        a=xRect+xWidth;</span><br><span class="line">        d=yRect+yHeight;</span><br><span class="line">        rectangle(xRect,yRect,a,d);<span class="comment">//定义矩形初始位置和大小</span></span><br><span class="line">        Sleep(<span class="number">55</span>); <span class="comment">//凶手我iu移动速度</span></span><br><span class="line"></span><br><span class="line">        x = x + xStep;</span><br><span class="line">        y = y + yStep;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(x&gt;=<span class="number">585</span>)  <span class="comment">//小球碰壁回弹</span></span><br><span class="line">        &#123;</span><br><span class="line">            xStep = xStep*(<span class="number">-1</span>); <span class="comment">//右边缘</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(x&lt;=<span class="number">15</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            xStep = xStep*(<span class="number">-1</span>); <span class="comment">//左边缘</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(y&lt;=<span class="number">15</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            yStep = yStep*(<span class="number">-1</span>); <span class="comment">//上边缘</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(ismouseclick(WM_RBUTTONDOWN)) <span class="comment">//鼠标控制矩形移动，左击左移，右击右移</span></span><br><span class="line">        &#123;</span><br><span class="line">            clearmouseclick(WM_RBUTTONDOWN);</span><br><span class="line">            xRect = xRect+<span class="number">40</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(ismouseclick(WM_LBUTTONDOWN))</span><br><span class="line">        &#123;</span><br><span class="line">            clearmouseclick(WM_LBUTTONDOWN);</span><br><span class="line">            xRect = xRect<span class="number">-40</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(x&gt;=xRect &amp;&amp; x&lt;=xRect+<span class="number">100</span> &amp;&amp; y==<span class="number">520</span>) <span class="comment">//矩形接到小球，并且回弹</span></span><br><span class="line">        &#123;</span><br><span class="line">            yStep = yStep*(<span class="number">-1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>((x&lt;xRect || x&gt;xRect+<span class="number">100</span>) &amp;&amp; y==<span class="number">520</span>) <span class="comment"><span class="doctag">///</span>/未接到小球，游戏结束</span></span><br><span class="line">        &#123;</span><br><span class="line">            MessageBox(NULL,<span class="string">"Game over!"</span>,<span class="string">"game"</span>,MB_OK);</span><br><span class="line">            system(<span class="string">"pause"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/10/03/python-11/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-python-10" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -169,7 +234,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="字典的练习"><a href="#字典的练习" class="headerlink" title="字典的练习"></a>字典的练习</h1><h2 id="河流"><a href="#河流" class="headerlink" title="河流"></a>河流</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rivers = &#123;<span class="string">'nile'</span>:<span class="string">'egypt'</span>,<span class="string">'yangtze'</span>:<span class="string">'china'</span>,<span class="string">'mississippi'</span>:<span class="string">'america'</span>&#125;</span><br><span class="line"><span class="keyword">for</span> key,value <span class="keyword">in</span> rivers.items():</span><br><span class="line">    print(<span class="string">'The '</span>+ key.title() +<span class="string">' runs through '</span>+value.title() ) <span class="comment">#使用循环为每条河流打印一条消息</span></span><br></pre></td></tr></table></figure>
+        <h1 id="字典的练习"><a href="#字典的练习" class="headerlink" title="字典的练习"></a>字典的练习</h1><h2 id="河流"><a href="#河流" class="headerlink" title="河流"></a>河流</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rivers = &#123;<span class="string">'nile'</span>:<span class="string">'egypt'</span>,<span class="string">'yangtze'</span>:<span class="string">'china'</span>,<span class="string">'mississippi'</span>:<span class="string">'america'</span>&#125;</span><br><span class="line"><span class="keyword">for</span> key,value <span class="keyword">in</span> rivers.items():</span><br><span class="line">    print(<span class="string">'The '</span>+ key.title() +<span class="string">' runs through '</span>+value.title()+<span class="string">'.'</span> ) <span class="comment">#使用循环为每条河流打印一条消息</span></span><br></pre></td></tr></table></figure>
 <h2 id="调查"><a href="#调查" class="headerlink" title="调查"></a>调查</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">favorite_languages = &#123;</span><br><span class="line">    <span class="string">'jen'</span>:<span class="string">'c'</span>,</span><br><span class="line">    <span class="string">'ken'</span>:<span class="string">'python'</span>,</span><br><span class="line">    <span class="string">'edward'</span>:<span class="string">'ruby'</span>,</span><br><span class="line">&#125;</span><br><span class="line">peoples = [<span class="string">'jen'</span>,<span class="string">'ken'</span>]</span><br><span class="line"><span class="keyword">for</span> people <span class="keyword">in</span> favorite_languages.keys():</span><br><span class="line">    <span class="keyword">if</span> people <span class="keyword">in</span> peoples:</span><br><span class="line">        print(<span class="string">'Thank you!'</span>) <span class="comment">#遍历名单，对已调查的人表示感谢</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="string">'You are invited to participate in the adjustment.'</span>) <span class="comment">#遍历名单，邀请未调查的人参与调查</span></span><br></pre></td></tr></table></figure>
 
       
@@ -731,97 +796,6 @@ print(<span class="string">'\n'</span>+<span class="string">'My favorite pizzas 
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2020/07/13/python-2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-python-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/13/python-1/">python中列表的学习（二）</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/13/python-1/" class="archive-article-date">
-  	<time datetime="2020-07-13T06:26:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="列表简介（二）"><a href="#列表简介（二）" class="headerlink" title="列表简介（二）"></a>列表简介（二）</h1><h2 id="组织列表"><a href="#组织列表" class="headerlink" title="组织列表"></a>组织列表</h2><p>我们经常需要以特定的顺序呈现信息。有时希望保留列表元素最初的排列顺序，而有时又需要调整排列顺序。</p>
-<h3 id="使用方法-sort-对列表进行永久性排列"><a href="#使用方法-sort-对列表进行永久性排列" class="headerlink" title="使用方法 sort()对列表进行永久性排列"></a>使用方法 sort()对列表进行永久性排列</h3><p>假设我们有一个汽车列表，并要让其中的汽车按字母顺序排列</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cars = [<span class="string">'bmw'</span>,<span class="string">'Audi'</span>,<span class="string">'toyota'</span>,<span class="string">'subaru'</span>,<span class="string">'audi'</span>]</span><br><span class="line">cars.sort()</span><br><span class="line">print(cars)</span><br></pre></td></tr></table></figure>
-<p>此时方法<code>sort（）</code>永久性地改变了列表元素的顺序。现在，汽车列表的排列顺序为：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'Audi'</span>, <span class="string">'audi'</span>, <span class="string">'bmw'</span>, <span class="string">'subaru'</span>, <span class="string">'toyota'</span>]</span><br></pre></td></tr></table></figure>
-
-<p>*如果需要按与字母顺序相反的顺序排列列表，只需向<code>sort（）</code>方法传递参数<code>reverse=true</code>,如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cars = [<span class="string">'bmw'</span>,<span class="string">'Audi'</span>,<span class="string">'toyota'</span>,<span class="string">'subaru'</span>,<span class="string">'audi'</span>]</span><br><span class="line">cars.sort(reverse=<span class="literal">True</span>) <span class="comment">#注意'True'中的'T'必须大写</span></span><br><span class="line">print(cars)</span><br></pre></td></tr></table></figure>
-<p>即可得到：<br><code>[&#39;toyota&#39;, &#39;subaru&#39;, &#39;bmw&#39;, &#39;audi&#39;, &#39;Audi&#39;]</code></p>
-<h3 id="使用函数-sorted-对列表进行临时排序"><a href="#使用函数-sorted-对列表进行临时排序" class="headerlink" title="使用函数 sorted()对列表进行临时排序"></a>使用函数 sorted()对列表进行临时排序</h3><p>在保留列表元素原来排列顺序的情况下，同时以特定的顺序呈现他们，可使用函数<code>sorted（）</code><br>下面尝试对汽车列表调用这个函数 </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cars=[<span class="string">'bwm'</span>,<span class="string">'audi'</span>,<span class="string">'toyota'</span>,<span class="string">'subaru'</span>]</span><br><span class="line">print(<span class="string">'Here is the original list:'</span>)</span><br><span class="line">print(cars) <span class="comment">#原始列表顺序</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">'Here is the sorted list:'</span>)</span><br><span class="line">print(sorted(cars)) <span class="comment">#排列后列表顺序</span></span><br><span class="line"></span><br><span class="line">print(cars) <span class="comment">#验证临时性</span></span><br></pre></td></tr></table></figure>
-<p>输出结果依次是：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Here <span class="keyword">is</span> the original list:</span><br><span class="line">[<span class="string">'bwm'</span>, <span class="string">'audi'</span>, <span class="string">'toyota'</span>, <span class="string">'subaru'</span>]</span><br><span class="line"></span><br><span class="line">Here <span class="keyword">is</span> the sorted list:</span><br><span class="line">[<span class="string">'audi'</span>, <span class="string">'bwm'</span>, <span class="string">'subaru'</span>, <span class="string">'toyota'</span>]</span><br><span class="line"></span><br><span class="line">[<span class="string">'bwm'</span>, <span class="string">'audi'</span>, <span class="string">'toyota'</span>, <span class="string">'subaru'</span>] <span class="comment">#验证成功</span></span><br></pre></td></tr></table></figure>
-
-<p>*如果要按字母相反的顺序显示，同样可以向函数<code>sorted（）</code>传递参数<code>reverse=True</code></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cars=[<span class="string">'bwm'</span>,<span class="string">'audi'</span>,<span class="string">'toyota'</span>,<span class="string">'subaru'</span>]</span><br><span class="line">print(sorted(cars,reverse=<span class="literal">True</span>)) <span class="comment">#注意cars后面是逗号</span></span><br></pre></td></tr></table></figure>
-<p>即可得到：<br><code>[&#39;toyota&#39;, &#39;subaru&#39;, &#39;bwm&#39;, &#39;audi&#39;]</code></p>
-<h3 id="使用方法-reverse（）倒着打印列表"><a href="#使用方法-reverse（）倒着打印列表" class="headerlink" title="使用方法 reverse（）倒着打印列表"></a>使用方法 reverse（）倒着打印列表</h3><p>该方法可以用来反转元素的排列顺序。假设汽车列表是按购买时间排列的，我们可以轻松地按相反的顺序排列汽车：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cars=[<span class="string">'bwm'</span>,<span class="string">'audi'</span>,<span class="string">'toyota'</span>,<span class="string">'subaru'</span>]</span><br><span class="line">cars.reverse()</span><br><span class="line">print(cars)</span><br></pre></td></tr></table></figure>
-<p>反转列表元素地排列顺序为：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'subaru'</span>, <span class="string">'toyota'</span>, <span class="string">'audi'</span>, <span class="string">'bwm'</span>]</span><br></pre></td></tr></table></figure>
-<p>方法<code>reverse（）</code>是永久性修改列表元素排列顺序，但可以随时恢复到原来的位置，只需对列表再次调用reverse（）即可</p>
-<h3 id="使用函数-len（）确定列表的长度"><a href="#使用函数-len（）确定列表的长度" class="headerlink" title="使用函数 len（）确定列表的长度"></a>使用函数 len（）确定列表的长度</h3><p>Python计算列表元素数从1开始，所以不会出现差一错误</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cars=[<span class="string">'bwm'</span>,<span class="string">'audi'</span>,<span class="string">'toyota'</span>,<span class="string">'subaru'</span>]</span><br><span class="line">print(len(cars))</span><br></pre></td></tr></table></figure>
-<p>结果显然为</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">4</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/13/python-1/">展开全文 >></a>
         </p>
       
 
